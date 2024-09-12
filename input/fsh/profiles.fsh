@@ -6,7 +6,8 @@ Description: "OpenMRS test patient"
 * name 1..*
 * name.given 1..2
 * maritalStatus 0..1 MS
-* maritalStatus.extension contains MaritalStatusDateExtension named MaritalStatusDate 1..1
+  * SU
+  * extension contains MaritalStatusDateExtension named MaritalStatusDate 1..1
 
 Extension: MaritalStatusDateExtension
 Id: marital-status-date
