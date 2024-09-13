@@ -2,7 +2,7 @@ Extension: MaritalStatusDateExtension
 Id: marital-status-date
 Title: "Patient Marital Status Date"
 Description: "An extension to capture the date for when the marital status came into effect"
-* . SU
+//* . SU
 * value[x] only date
 * valueDate 1..1
 * ^context[+].type = #element
