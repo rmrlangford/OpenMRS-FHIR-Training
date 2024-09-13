@@ -9,12 +9,15 @@ Description: "OpenMRS test patient"
   * SU
   * extension contains MaritalStatusDateExtension named MaritalStatusDate 1..1
 
-Extension: MaritalStatusDateExtension
-Id: marital-status-date
-Title: "Patient Marital Status Date"
-Description: "An extension to capture the date for when the marital status came into effect"
-* . SU
-* value[x] only date
-* valueDate 1..1
-* ^context[+].type = #element
-* ^context[=].expression = "Patient.maritalStatus"
+* link 0..* MS
+* link.other only Reference(OpenMRSPatientRelation)
+
+Profile: OpenMRSPatientRelation
+Parent: RelatedPerson
+Id: openmrs-patient-relationship
+Title: "OpenMRS Patient Related Person"
+Description: "OpenMRS test patient relation"
+* name 1..*
+* name.given 1..*
+* relationship 1..1
+* extension contains MaritalStatusAndEffectiveDateExtension named MaritalStatusAndEffectiveDate 0..* MS
