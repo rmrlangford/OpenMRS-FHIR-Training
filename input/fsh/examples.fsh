@@ -31,8 +31,8 @@ InstanceOf: OpenMRSPatientRelation
 Usage: #example
 Title: "Related Person - Mother"
 Description: "Patient marital status not documented but includes a Mother relationship."
-* name[+].given[+] = "Richard"
-* name[=].given[+] = "Michael"
+* name[+].given[+] = "Jane"
+* name[=].given[+] = "Smith"
 * patient = Reference(PatientExample3)
 * relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#MTH
 * extension[MaritalStatusAndEffectiveDate][+].extension[MaritalStatus].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-MaritalStatus#D
